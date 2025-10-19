@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-x: hidden;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.header-book-flights-bg {
+  background: linear-gradient(rgba(234, 247, 246, 0.8), rgba(234, 247, 246, 0.8)), url(../images/./pictures/H_BF_BG.png);
+  background-size: cover;
+  margin-bottom: 232px;
+  padding: 0px 30px;
+}
+
+a {
+  display: flex;
+  align-items: center;
+}
+
+a:hover, a:checked, a {
+  color: #151515;
+  text-decoration: none;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+.wrapper {
+  display: flex;
+}
+
+@keyframes floatText {
+  0% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(-2px);
+  }
+}
+@keyframes sideShake {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes letterMove {
+  0% {
+    letter-spacing: 0px;
+  }
+  50% {
+    letter-spacing: 0.4px;
+  }
+  100% {
+    letter-spacing: 0px;
+  }
+}
+.header .logo-link {
+  line-height: 0;
+  height: 37px;
+}
+.header__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 0px 0px 0px;
+  -moz-column-gap: 150px;
+       column-gap: 150px;
+}
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 823px;
+  width: 100%;
+}
+.header__nav-menu {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  max-width: 555px;
+  width: 100%;
+  justify-content: space-between;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.header__nav-link {
+  display: flex;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  transition: 0.3 ease;
+  padding: 0;
+}
+.header__nav-link:hover {
+  animation: floatText 1s ease-in-out infinite;
+  color: #656293;
+}
+.header__nav-link:active {
+  scale: 0.95;
+  color: rgb(79.9755102041, 77.6, 116.4);
+}
+.header__nav-account {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: space-between;
+  max-width: 172px;
+  width: 100%;
+}
+.header__nav-register {
+  position: relative;
+}
+.header__nav-button {
+  padding: 5px 23px;
+}
+.header__nav-button-sign-in, .header__nav-button-sign-in:hover {
+  color: #FFFFFF;
+}
+.header__nav-button:hover {
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+  z-index: 1;
+  max-width: 171px;
+  width: 100%;
+  padding-left: 28px;
+}
+.header__nav-button:hover .header__nav-button-icons {
+  z-index: 2;
+  opacity: 1;
+  width: 40%;
+  height: 100%;
+  background-color: rgb(79.9755102041, 77.6, 116.4);
+}
+.header__nav-button:hover .header__nav-register {
+  position: absolute;
+  opacity: 0;
+}
+.header__nav-button:hover .header__nav-button-auth {
+  opacity: 1;
+  right: 0px;
+}
+.header__nav-button:hover .header__nav-button-google, .header__nav-button:hover .header__nav-button-apple {
+  display: block;
+}
+.header__nav-button:active {
+  background-color: rgb(90.487755102, 87.8, 131.7);
+  color: rgb(242.25, 242.25, 242.25);
+}
+.header__nav-button-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-radius: 5px;
+  transition: ease 0.3s;
+  opacity: 0;
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  right: 0;
+  top: 0;
+}
+.header__nav-button-auth {
+  opacity: 0;
+  right: -100px;
+}
+.header__nav-button-auth .header__nav-button-google {
+  width: 20px;
+  height: 20px;
+  display: none;
+}
+.header__nav-button-auth .header__nav-button-google:hover {
+  display: block;
+}
+.header__nav-button-auth .header__nav-button-google:active {
+  filter: brightness(0.8);
+}
+.header__nav-button-auth .header__nav-button-apple {
+  width: 22px;
+  height: 22px;
+  display: none;
+}
+.header__nav-button-auth .header__nav-button-apple:hover {
+  display: block;
+}
+.header__nav-button-auth .header__nav-button-apple:active {
+  filter: brightness(0.8);
+}
+
+.button {
+  display: flex;
+  background-color: #656293;
+  color: #FFFFFF;
+  border: none;
+}
+.button_size_1 {
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+}
+.button_size_2 {
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+}
+.button_size_3 {
+  border-radius: 12px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+}
+.button_actions-type_1:hover {
+  color: #FFFFFF;
+}
+
+.book-flights__wrapper {
+  justify-content: space-between;
+  align-items: center;
+  padding: 94px 0px 149px 0px;
+}
+.book-flights__text-block {
+  display: flex;
+  flex-direction: column;
+  max-width: 587px;
+  row-gap: 48px;
+  padding-bottom: 10px;
+}
+.book-flights__text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 66px;
+  line-height: 1.17;
+}
+.book-flights__text span {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 66px;
+  text-transform: uppercase;
+  color: #656293;
+}
+.book-flights__explore {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+.book-flights__explore a {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 121px;
+}
+.book-flights__explore a:hover {
+  animation: letterMove 1s ease-in-out infinite;
+  color: #656293;
+}
+.book-flights__explore a:hover:hover svg {
+  animation: sideShake 1s ease-in-out infinite;
+}
+.book-flights__explore a:hover:hover svg path {
+  stroke: #656293;
+}
+.book-flights__explore a:hover:active {
+  scale: 0.95;
+  color: rgb(79.9755102041, 77.6, 116.4);
+}
+.book-flights__explore a:hover:active svg {
+  scale: 0.95;
+  stroke: rgb(79.9755102041, 77.6, 116.4);
+}
+.book-flights__illuminator {
+  width: 360px;
+  height: 451px;
+  box-shadow: inset 0px -4px 5px rgba(0, 0, 0, 0.25), inset 0 0 0 15px #FFFFFF;
+  border-radius: 120px;
+  -webkit-backdrop-filter: saturate(180%) brightness(75%) contrast(180%);
+          backdrop-filter: saturate(180%) brightness(75%) contrast(180%);
+}/*# sourceMappingURL=style.css.map */
